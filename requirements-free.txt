@@ -1,0 +1,23 @@
+# Core packages (always needed)
+streamlit>=1.28.0
+deep-translator>=1.11.0
+langdetect>=1.0.9
+python-dotenv>=1.0.0
+llama-index>=0.12.0
+
+# Free LLM Options (choose one or more):
+
+# Option 1: Ollama (Local LLMs - completely free)
+llama-index-llms-ollama>=0.6.0
+
+# Option 2: Google Gemini (Free tier - no billing required)  
+llama-index-llms-gemini>=0.3.0
+
+# Option 3: Hugging Face (Free local models)
+llama-index-llms-huggingface>=0.6.0
+
+# Option 4: Anthropic Claude (has free tier)
+llama-index-llms-anthropic>=0.4.0
+
+# Option 5: Open source models via Together AI (free credits)
+llama-index-llms-together>=0.2.0

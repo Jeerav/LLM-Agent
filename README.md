@@ -65,3 +65,53 @@ streamlit run LLM-agent.py
 - Free tier has limited monthly credits
 - Pay-as-you-go requires adding a payment method
 - Monitor usage at: https://platform.openai.com/account/usage
+
+## 🚀 Free Alternatives to Avoid OpenAI Quotas
+
+### Option 1: Ollama (Local LLMs) - COMPLETELY FREE ⭐
+```bash
+# Install Ollama from: https://ollama.ai/
+# Pull a model
+ollama pull llama3.2
+
+# Install integration
+pip install llama-index-llms-ollama
+
+# Run free version
+streamlit run LLM-agent-free.py
+```
+**Benefits**: No API costs, works offline, unlimited usage
+
+### Option 2: Google Gemini (Free Tier) - RECOMMENDED ⭐
+```bash
+# Get free API key: https://makersuite.google.com/app/apikey  
+pip install llama-index-llms-gemini
+
+# Add to .env file:
+GOOGLE_API_KEY=your_gemini_key
+
+# Run Gemini version
+streamlit run LLM-agent-gemini.py
+```
+**Benefits**: 1,500 free requests/day, no billing required, high quality
+
+### Option 3: Hugging Face (Local Models)
+```bash
+pip install llama-index-llms-huggingface transformers torch
+```
+**Benefits**: Completely free, runs locally
+
+### Option 4: Together AI (Free Credits)
+- Get $25 free credits: https://together.ai/
+- Supports many open-source models
+
+### Option 5: Anthropic Claude (Free Tier)
+- Get API key: https://console.anthropic.com/
+- Has generous free tier
+
+## File Overview
+- `LLM-agent.py` - Original with OpenAI (requires quota)
+- `LLM-agent-free.py` - Ollama version (completely free)
+- `LLM-agent-gemini.py` - Google Gemini version (free tier)
+- `requirements.txt` - For OpenAI version
+- `requirements-free.txt` - For free alternatives
